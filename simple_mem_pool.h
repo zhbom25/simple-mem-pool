@@ -11,7 +11,7 @@ using namespace std;
 
 #define POOL_SIZE   1000
 
-// 内存空闲块
+// 空闲内存块
 struct mem_block {
     int pos;
     int size;
@@ -22,7 +22,7 @@ class SimpleMemPool {
 private:
     int start;
     int end;
-    mem_block* free_list_head;      // 单链表维护内存空闲块，且空闲块地址依次递增
+    mem_block* free_list_head;      // 单链表维护空闲内存块，且空闲块地址依次递增
     char* alloc;
 
 public:
